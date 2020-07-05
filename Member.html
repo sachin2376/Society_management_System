@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title> Member Form </title>
+	<script>  
+			function validateform(){ 
+			var name=document.myform.name.value;  
+			var cont=document.myform.con.value;
+			var mail=document.myform.mail.value;
+			var room=document.myform.room.value;
+			var bill=document.myform.bill.value;
+			var jd=document.myform.jd.value;
+			var ld=document.myform.ld.value;
+			  
+			  
+			  
+			if(name==null || name=="")
+			{
+			  alert("Plese Enter Valid Name...!");  
+			  return false;
+			}
+			else if(cont.length!=10){ 
+			  alert("Enter Valid Mobile Number...!");  
+			  return false;  
+			  } 
+
+			  var atposition=mail.indexOf("@");  
+			  var dotposition=mail.lastIndexOf(".");  
+			  if(atposition<1 || dotposition<atposition+2 || dotposition+2>=mail.length){  
+  			  alert("Please Enter a Valid E-mail Address");  
+  			  return false;  
+				  } 
+				  
+			else if(room==null || room==""){
+			  alert("Plese Enter Valid Flate No...!");  
+			  return false;
+			}  
+
+			else if(bill==null || bill==""){
+			  alert("Plese Enter Valid Bill ID...!");  
+			  return false;
+			}  
+
+			else if(jd==null || jd==""){
+			  alert("Plese Enter Valid Join date...!");  
+			  return false;
+			}   
+		}	
+	</script>
+
+<style>
+
+.btn
+	{
+	 position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	background-color: rgb(248, 238, 211);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    padding: 8px 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+	font-size: 25px;
+	}
+	
+.container .btn:hover 
+{
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.btn1
+{
+	border-radius: 5px;
+    background-color: rgb(245, 243, 237);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    padding: 7px 25px;
+	cursor: pointer;
+}	
+
+</style>
+</head>
+<body>
+<body background="a1.jpg">
+<form name="myform" method="post" action="Member.php" onsubmit="return validateform()"> 
+<table border="1" cellpadding="10" width="100%" height="100%" align="center" background="a1.jpg">
+<tr>
+		<td align="center">	
+	<center><u><font face="Comic Sans MS, cursive, sans-serif" size="7%" color="black"><b>Member Details</b></font></u> </center>
+	</td>
+	</div>
+</tr>
+</table>
+<table border="1" align="center">
+<tr>
+<td>
+
+<table border="0" cellpadding="10" width="100%" height="100%" align="center" cellspacing="19" background="a1.jpg">
+
+
+<tr>
+		<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Flat No :-</td></font>
+		<td><select name='flat_no'><option 'value'="A">A</option><option 'value'="B">B</option><option 'value'="C">C</option><option 'value'="D">D</option></select>
+		<select name='flat'>
+			<option 'value'="1">1</option>
+			<option 'value'="2">2</option>
+			<option 'value'="3">3</option>
+			<option 'value'="4">4</option>
+			<option 'value'="5">5</option>
+			<option 'value'="6">6</option>
+			<option 'value'="7">7</option>
+			<option 'value'="8">8</option>
+			<option 'value'="9">9</option>
+			<option 'value'="10">10</option>
+			</select>
+		</td>
+</tr>
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Name:-</td></font>
+	<td><input type="text" name="name" size="25"></td>
+</tr>
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Contact No:-</td></font>
+	<td><input type="text" name="con" size="25">
+</tr>
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black"> E-mail :-</td></font>
+	<td><input type="text" name="mail" size="25">
+</tr>
+
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Join Date :-</td></font>
+	<td><input type="date" placeholder="yyyy-mm-dd" name="jd" size="25">
+</tr>
+
+</td>
+</tr>
+
+</table>
+</table>
+<br><br><br><br><br><br>
+
+<div class="container">
+<table border="2" cellpadding="10" width="600" height="80px" align="center" background="a1.jpg">
+<tr border="1">
+	<div class="container">
+	<td align="center"><input class="btn" type ="submit" name="action" value="Save">
+	</td>
+	<td align="center"><a class="btn"  href="left_menu.php" value="Back">BACK</td>
+	</div>
+	</div>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+
+
+<!---
+<script>
+	$(document).ready(function()
+	{
+		$('save').click(function()
+		{
+			var flatno=document.myform.flat_no.value;
+			var flat=document.myform.flat.value;
+			var name=document.myform.name.value;  
+			var cont=document.myform.con.value;
+			var mail=document.myform.mail.value;
+			var bill=document.myform.bill.value;
+			var jd=document.myform.jd.value;
+			var ld=document.myform.ld.value;
+			
+			if(name=='' || cont=='' || mail=='' || room=='' || bill=='' || jd=='' || ld=='')
+			{
+				$('#error_message').html("All Fileds are necessary");
+			}
+			else
+			{
+				$('#error_message').html('');
+				$.ajax({
+					url:"member.php",
+					method:"POST",
+					data:{flat_no:flatno,flat:flat,name:name,cont:cont,em:mail,in_date:jd,out_date:ld},
+					success:function(data){
+					$("myform").trigger("reset");
+					$("#success_message").fadeIn().html(data);
+					setTimeout(funcion({
+						$("#success_message").fadeOut('slow');
+					},2000);
+					}
+				});
+			}
+		
+		});
+	});
+</script>-->

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Visitor Form </title>
+		<script>  
+				function validateform(){ 
+				var id=document.myform.id.value;  	 
+				var name=document.myform.name.value;  
+				var intime=document.myform.intime.value;
+				var outtime=document.myform.outtime.value;  
+				var member=document.myform.mname.value;
+				var fno=document.myform.fno.value;
+				  
+				if(id==null || id=="")
+				{
+				  alert("Plese Enter Valid ID...!");  
+				  return false;
+				}
+				else if(name==null || name=="")
+				{
+				  alert("Name Can't Be Blank...!");  
+				  return false;
+				}
+				else if(intime==null || intime==""){
+				  alert("Enter a Valid Incoming Time...!");  
+				  return false;
+					}	
+				else if(outtime=null || outtime==""){ 
+				  alert("Plese Enter Valid Outgoing Time...!");  
+				  return false;  
+				  }  
+	
+				else if(member=null || member==""){ 
+				  alert("Plese Enter Valid Member Name...!");  
+				  return false;  
+				  }  
+
+				else if(fno=null || fno==""){ 
+				  alert("Plese Enter Valid Flate Number...!");  
+				  return false;  
+				  }  
+
+				}  
+		</script>
+<style>
+
+.btn
+	{
+	 position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	background-color: rgb(248, 238, 211);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    padding: 8px 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+	font-size: 25px;
+	}
+	
+	.container .btn:hover 
+	{
+  background-color: black;
+  color: white;
+  }
+
+.btn1
+{
+	border-radius: 5px;
+    background-color: rgb(245, 243, 237);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    padding: 7px 25px;
+	cursor: pointer;
+}	
+
+</style>
+</head>
+<body background="abc.jpg">
+<form name="myform" method="post" onsubmit="return validateform()" action="Visitors.php" > 
+
+<table border="1" cellpadding="10" width="100%" height="100%" align="center" background="123.jpg">
+<tr>
+	<td align="center">	
+	<center><u><font face="Comic Sans MS, cursive, sans-serif" size="7%" color="black"><b>Visitor Records</b></font></u> </center>
+	</td>
+	</div>
+</tr>
+</table>
+
+<table border="1" align="center">
+<tr>
+<td>
+
+<table border="0" cellpadding="10" width="100%" height="100%" align="center" cellspacing="19" background="123.jpg">
+
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Flat No:-</td></font>
+	<td><select name='flat_no'><option 'value'="A">A</option><option 'value'="B">B</option><option 'value'="C">C</option><option 'value'="D">D</option></select>
+		<select name='flat'>
+			<option 'value'="1">1</option>
+			<option 'value'="2">2</option>
+			<option 'value'="3">3</option>
+			<option 'value'="4">4</option>
+			<option 'value'="5">5</option>
+			<option 'value'="6">6</option>
+			<option 'value'="7">7</option>
+			<option 'value'="8">8</option>
+			<option 'value'="9">9</option>
+			<option 'value'="10">10</option>
+			</select>
+		</td>
+</tr>
+
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Name:-</td></font>
+	<td><input type="text" name="name" size="25"></td>
+</tr>
+
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">In-Time:-</td></font>
+	<td><input type="time" name="intime" size="25">
+</tr>
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Out-Time:-</td></font>
+	<td><input type="time" name="outtime" size="25">
+	<td><input type="date" name="outdate" size="25">
+	
+</tr>
+
+<tr>
+	<td align="right"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Reason of visit:-</td></font>
+	<td><input type="text" name="mname" size="25">
+</tr>
+
+
+</tr>
+
+</table>
+</table>
+<br><br><br><br><br><br>
+
+<div class="container">
+<table border="2" cellpadding="10" width="100%" height="80px" align="center" background="a1.jpg">
+<tr border="1">
+	<div class="container">
+	<td align="center"><input class="btn" type ="submit" name="save" value="Save"> </td>
+	<td align="center"><a class="btn" href="left_menu1.php" >BACK</td>
+	</div>
+	</div>
+</tr>
+</table>
+</form>
+</body>
+</html>

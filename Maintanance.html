@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Maintanace Form </title>
+	<script>  
+		function validateform(){ 
+		var qid=document.myform.id.value;  	 
+		var fno=document.myform.fno.value;
+		var main=document.myform.main.value;  
+		var lbill=document.myform.lbill.value;
+		var date=document.myform.date.value; 
+
+		if(qid==null || qid=="")
+		{
+		  alert("Please Enter Valid ID...!");  
+		  return false;
+		}
+		else if(fno==null || fno=="")
+		{
+		  alert("Please Enter Valid Flat No...!");  
+		  return false;
+		}
+		else if(main==null || main==""){
+		  alert("Enter a Valid Maintanace...!");  
+		  return false;
+			}	
+		else if(lbill=null || lbill==""){ 
+		  alert("Please Enter Valid Light Bill...!");  
+		  return false;  
+		  }  
+
+		else if(date=null || date==""){ 
+		  alert("Please Enter Valid Date...!");  
+		  return false;  
+		  }  
+
+		}  
+</script>
+
+<style>
+
+.btn
+	{
+	 position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(248, 238, 211);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    padding: 8px 23px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+	font-size: 25px;
+	}
+	
+.container .btn:hover 
+{
+  background-color: black;
+  color: white;
+}
+
+
+.btn1
+{
+	border-radius: 5px;
+    background-color: rgb(245, 243, 237);
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    padding: 7px 25px;
+	cursor: pointer;
+}	
+
+</style>
+</head>
+<body background="a1.jpg">
+<form name="myform" method="post" onsubmit="return validateform()" action="Maintainance.php" > 
+<table border="1" cellpadding="10" width="100%" height="100%" align="center" background="a1.jpg">
+<tr>
+		<td align="center">	
+	<center><u><font face="Comic Sans MS, cursive, sans-serif" size="7%" color="black"><b>Maintenance Details</b></font></u> </center>
+	</td>
+	</div>
+</tr>
+</table><br>
+<table border="1" align="center">
+<tr>
+<td>
+
+<table border="0" cellpadding="10" width="100%" height="100%" align="center" cellspacing="19" background="a1.jpg">
+
+
+<tr>
+	<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Flat No:-</td></font>
+	<td><select name='flat_no'><option 'value'="A">A</option><option 'value'="B">B</option><option 'value'="C">C</option><option 'value'="D">D</option></select>
+		<select name='flat'>
+			<option 'value'="1">1</option>
+			<option 'value'="2">2</option>
+			<option 'value'="3">3</option>
+			<option 'value'="4">4</option>
+			<option 'value'="5">5</option>
+			<option 'value'="6">6</option>
+			<option 'value'="7">7</option>
+			<option 'value'="8">8</option>
+			<option 'value'="9">9</option>
+			<option 'value'="10">10</option>
+			</select>
+		</td>
+</tr>
+
+<tr>
+<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Month</font></td>
+<td>
+	<select name='month'>
+			<option 'value'="January">January</option>
+			<option 'value'="February">February</option>
+			<option 'value'="March">March</option>
+			<option 'value'="April">April</option>
+			<option 'value'="May">May</option>
+			<option 'value'="June">June</option>
+			<option 'value'="July">July</option>
+			<option 'value'="August">August</option>
+			<option 'value'="September">September</option>
+			<option 'value'="October">October</option>
+			<option 'value'="November">November</option>
+			<option 'value'="December">December</option>
+			
+			</select>
+		</td>
+</tr>
+
+
+<tr>
+	<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Maintainance:-</td></font>
+	<td><input type="text" name="maintainance" size="25" value= "3500" readonly></td>
+</tr>
+
+<tr>
+	<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black"> Light Bill:-</td></font>
+	<td><input type="text" name="lbill" size="25">
+</tr>
+
+<tr>
+	<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black"> Water Bill:-</td></font>
+	<td><input type="text" name="wbill" size="25">
+</tr>
+
+<tr>
+	<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black"> Other charges:-</td></font>
+	<td><input type="text" name="other" size="25">
+</tr>
+
+<tr>
+	<td align="left"><b><font face="Comic Sans MS, cursive, sans-serif" size="5%" color="black">Date:-</td></font>
+		<td><input type="date" name="date" size="25">
+</tr>
+
+</td>
+</tr>
+
+</table>
+</table><br>
+<br><br><br><br><br>
+<div class="container">
+<table border="2" cellpadding="10" width="700" height="80px" align="center" background="a1.jpg">
+<tr border="1">
+	<div class="container">
+	<td align="center"><input class="btn" type ="submit" name="action" value="Generate Bill"> </td>
+	
+	</div>
+	</div>
+</tr>
+</table>
+</form>
+</body>
+</html>
